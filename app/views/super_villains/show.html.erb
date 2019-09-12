@@ -10,5 +10,12 @@
   <%= @super_villain.description %>
 </p>
 
+<p>
+  <strong>Minions:</strong>
+  <% @super_villain.minions.each do |m| %>
+    <%= m.name %>, 
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_super_villain_path(@super_villain) %> |
 <%= link_to 'Back', super_villains_path %>
